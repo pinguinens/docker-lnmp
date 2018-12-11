@@ -16,6 +16,13 @@ The whole app is divided into three Containers:
 
 Our app scripts are located on host, you can edit files directly without rebuilding/restarting whole images/containers.
 
+### Contents
+
+- nginx:1.15.7
+- php:7.3.0-fpm
+- image: mysql:8.0.13
+- Self-signed SSL Certificate
+
 ### Build and Run
 
 At first, you should have had [Docker](https://docs.docker.com) and [Docker Compose](https://docs.docker.com/compose) installed.
@@ -31,6 +38,8 @@ For more operations to containers, please refer to:
 Check out your https://\<docker-host\> and have fun :beer:
 
 ### Contributors
+
+Pinguinens <nikolay@tegra.media>
 
 Micooz <micooz@hotmail.com>
 

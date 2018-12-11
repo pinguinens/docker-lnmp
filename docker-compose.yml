@@ -1,6 +1,6 @@
 # web server
 nginx:
-  image: nginx:latest
+  image: nginx:1.15.7
   ports:
     - "80:80"
     - "443:443"
@@ -37,7 +37,7 @@ fpm:
 
 # database
 mysql:
-  image: mysql:latest
+  image: mysql:8.0.13
   ports:
     # Allow client to access 3306
     - "3306:3306"
