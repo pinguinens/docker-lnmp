@@ -20,7 +20,7 @@ Our app scripts are located on host, you can edit files directly without rebuild
 
 - nginx:1.15.7
 - php:7.3.0-fpm
-- image: mysql:8.0.13
+- mysql:8.0.13
 - Self-signed SSL Certificate
 
 ### Build and Run
