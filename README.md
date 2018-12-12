@@ -23,6 +23,9 @@ Our app scripts are located on host, you can edit files directly without rebuild
 - mysql:8.0.13
 - Self-signed SSL Certificate
 
+### PHP Extensions
+- xdebug:2.7.0beta1 (port 9009)
+
 ### Build and Run
 
 At first, you should have had [Docker](https://docs.docker.com) and [Docker Compose](https://docs.docker.com/compose) installed.
