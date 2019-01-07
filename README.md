@@ -25,6 +25,8 @@ Our app scripts are located on host, you can edit files directly without rebuild
 
 ### PHP Extensions
 - xdebug:2.7.0beta1 (port 9009)
+- GD Lib
+- PDO MySQL driver
 
 ### Build and Run
 
