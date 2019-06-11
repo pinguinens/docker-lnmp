@@ -11,22 +11,23 @@ I want to share my ideas and designs about Web-Deploying using Docker with you.
 The whole app is divided into three Containers:
 
 1. Nginx is running in `Nginx` Container, which handles requests and makes responses.
-2. PHP or PHP-FPM is put in `PHP-FPM` Container, it retrieves php scripts from host, interprets, executes then responses to Nginx. If necessary, it will connect to `MySQL` as well.
-3. MySQL lies in `MySQL` Container, 
+2. PHP or PHP-FPM is put in `PHP` Container, it retrieves php scripts from host, interprets, executes then responses to Nginx. If necessary, it will connect to `MySQL` as well.
+3. MariaDB lies in `MariaDB` Container, 
 
 Our app scripts are located on host, you can edit files directly without rebuilding/restarting whole images/containers.
 
 ### Contents
 
-- nginx:1.15.7
-- php:7.3.1-fpm
-- mysql:8.0.13
+- nginx:1.17.0
+- php:7.3.6
+- mariadb:10.3.15
 - Self-signed SSL Certificate
 
 ### PHP Extensions
-- xdebug:2.7.0beta1 (port 9009)
+- xdebug:2.7.2 (port 9009)
 - GD Lib
 - PDO MySQL driver
+- MySQL Extension
 
 ### Build and Run
 

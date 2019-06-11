@@ -27,7 +27,7 @@ services:
       # environment:
         # XDEBUG_CONFIG: remote_host={{YOUR_IP_ADDRESS}}
       depends_on:
-        - mysql
+        - mariadb
 
     # web server
     nginx:
