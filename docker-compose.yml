@@ -23,8 +23,9 @@ services:
         # php.ini
         - ./php-fpm/config/php.ini:/usr/local/etc/php/php.ini:ro
       env_file:
-        - ./mysql/credentials.env
         - ./php-fpm/paths.env
+      # environment:
+        # XDEBUG_CONFIG: remote_host={{YOUR_IP_ADDRESS}}
       depends_on:
         - mysql
 

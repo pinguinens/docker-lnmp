@@ -1,4 +1,4 @@
-FROM php:7.3.1-fpm
+FROM php:7.3.6-fpm-stretch
 
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
@@ -13,6 +13,16 @@ RUN apt-get update && apt-get install -y \
 
 RUN pecl install \
     && pecl install \
-        xdebug-2.7.0beta1 \
+        xdebug-2.7.2 \
     && docker-php-ext-enable \
         xdebug
+
+RUN echo 'xdebug.remote_enable = 1' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.remote_autostart = 1' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.idekey = "vscode"' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.default_enable = 1' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.remote_host = docker.for.win.localhost' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.var_display_max_children = -1' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.var_display_max_children = -1' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.var_display_max_depth = -1' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \ 
+    && echo 'xdebug.remote_port = 9009' » /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
