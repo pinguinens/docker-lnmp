@@ -1,17 +1,16 @@
 version: "3.7"
 services:
     #database
-    mysql:
-      build: ./mysql
+    mariadb:
+      build: ./mariadb
       ports:
         - "3306:3306"
       volumes:
-        - ./mysql/instance:/var/lib/mysql:rw
+        - ./mariadb/instance:/var/lib/mysql:rw
         # MySQL config
-        - ./mysql/config/local.cnf:/etc/mysql/conf.d/local.cnf:ro
+        - ./mariadb/config/local.cnf:/etc/mysql/conf.d/local.cnf:ro
       env_file:
-        - ./mysql/credentials.env
-      command: "mysqld --sql-mode=NO_ENGINE_SUBSTITUTION"
+        - ./mariadb/credentials.env
     
     # php-fpm
     php:
